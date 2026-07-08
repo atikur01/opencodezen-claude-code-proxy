@@ -1,8 +1,8 @@
 import { Router } from "express";
 import config from "../../config.js";
 
-const CONTEXT_WINDOW = 1_000_000;
-const MAX_OUTPUT_TOKENS = 131_000;
+const CONTEXT_WINDOW = 200_000;
+const MAX_OUTPUT_TOKENS = 128_000;
 
 const router = Router();
 
