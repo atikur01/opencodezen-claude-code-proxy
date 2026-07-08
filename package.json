@@ -1,0 +1,13 @@
+{
+  "name": "opencodezen-claude-proxy",
+  "version": "1.0.0",
+  "description": "Anthropic API compatible proxy that forwards requests to OpenCodeZen API",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
