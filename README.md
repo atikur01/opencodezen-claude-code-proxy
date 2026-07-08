@@ -11,8 +11,8 @@ An Anthropic API compatible proxy that forwards requests to the OpenCodeZen (Ope
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd opencodezen-claude-proxy
+   git clone https://github.com/atikur01/opencodezen-claude-code-proxy
+   cd opencodezen-claude-code-proxy
    ```
 
 2. Install dependencies:
@@ -47,7 +47,7 @@ Starts the server normally:
 npm start
 ```
 
-## Client Configuration (e.g., Cline, Roo Code)
+## Client Configuration (e.g., Cline, Roo Code, Claude Code)
 
 To use this proxy with AI coding assistants that support the Claude API, use the following settings:
 
@@ -56,7 +56,7 @@ To use this proxy with AI coding assistants that support the Claude API, use the
 - **Model ID**: `mimo-v2.5-free`
 - **API Key**: `sk-any-string` (The proxy uses the key defined in your `.env` file, but some clients require a non-empty string here).
 
-### Example Environment Variables
+### Example Environment Variables (for Claude Code)
 If you are configuring via environment variables:
 ```env
 ANTHROPIC_BASE_URL=http://localhost:3456
