@@ -1,8 +1,8 @@
 import { Router } from "express";
 import config from "../../config.js";
 
-const CONTEXT_WINDOW = 200_000;
-const MAX_OUTPUT_TOKENS = 128_000;
+const CONTEXT_WINDOW = 1000000;
+const MAX_OUTPUT_TOKENS = 128000;
 
 const router = Router();
 
@@ -13,7 +13,9 @@ function buildModelObject(id) {
     display_name: id,
     created_at: "2025-01-01T00:00:00Z",
     context_window: CONTEXT_WINDOW,
+    max_input_tokens: CONTEXT_WINDOW,
     max_output_tokens: MAX_OUTPUT_TOKENS,
+    max_tokens: MAX_OUTPUT_TOKENS,
   };
 }
 
