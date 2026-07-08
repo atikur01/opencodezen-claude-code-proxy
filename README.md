@@ -47,14 +47,27 @@ Starts the server normally:
 npm start
 ```
 
+## Deployment to Render.com
+
+This project is ready to be deployed to [Render](https://render.com/).
+
+1. Create a new **Web Service** on Render.
+2. Connect your GitHub repository: `https://github.com/atikur01/opencodezen-claude-code-proxy`.
+3. Render will automatically detect the `Dockerfile`.
+4. Add the following **Environment Variables** in the Render dashboard:
+   - `OPENAI_API_KEY`: Your OpenCodeZen API key.
+   - `OPENAI_MODEL`: `mimo-v2.5-free` (or your preferred model).
+   - `OPENAI_BASE_URL`: `https://opencode.ai/zen/v1`
+5. Render will provide a URL like `https://your-service-name.onrender.com`.
+
 ## Client Configuration (e.g., Cline, Roo Code, Claude Code)
 
 To use this proxy with AI coding assistants that support the Claude API, use the following settings:
 
 - **API Provider**: Anthropic (or Custom/OpenAI compatible if using the Base URL)
-- **Base URL**: `http://localhost:3456`
+- **Base URL**: `http://localhost:3456` (or your Render URL)
 - **Model ID**: `mimo-v2.5-free`
-- **API Key**: `sk-any-string` (The proxy uses the key defined in your `.env` file, but some clients require a non-empty string here).
+- **API Key**: `sk-any-string` (The proxy uses the key defined in your `.env` file or environment variables).
 
 ### Example Environment Variables (for Claude Code)
 If you are configuring via environment variables:
