@@ -36,6 +36,8 @@ const config = {
   openaiApiKey: process.env.OPENAI_API_KEY || "",
   openaiModel: process.env.OPENAI_MODEL || "mimo-v2.5-free",
   openaiBaseUrl: process.env.OPENAI_BASE_URL || "https://opencode.ai/zen/v1",
+  maxInputTokens: parseInt(process.env.MAX_INPUT_TOKENS || "128000", 10),
+  maxOutputTokens: parseInt(process.env.MAX_OUTPUT_TOKENS || "16000", 10),
 };
 
 export default config;
